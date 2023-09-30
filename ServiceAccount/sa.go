@@ -12,13 +12,21 @@ type endpointGroup struct {
 	name string
 }
 
-func AddServiceAccount() {
+func AddServiceAccount(id int, tenant_id int, username string, usertype string) {
 	/* get id, tenant_id, username, type
 	then add the object with these attributes */
+	s := serviceAccount{}
+	s.id = id
+	s.tenant_id = tenant_id
+	s.username = username
+	s.usertype = usertype
 }
 
-func AddEnpointGroup() {
+func AddEnpointGroup(id int, name string) {
 	/*get id and name of and then add it */
+	eg := endpointGroup{}
+	eg.id = id
+	eg.name = name
 }
 
 func GetServiceAccount() {
